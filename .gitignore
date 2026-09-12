@@ -1,0 +1,16 @@
+# Dependencies
+node_modules
+
+# Environment variables (contains DB credentials and JWT secret)
+.env
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+
+# Vercel
+.vercel
