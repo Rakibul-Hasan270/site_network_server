@@ -22,8 +22,13 @@ const ordersRouter = require('./routes/orders');
 const app = express();
 const port = process.env.PORT || 9000;
 
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://site-network-client.vercel.app'
+];
+
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:5173',
+  origin: allowedOrigins,
   credentials: true,
 }));
 app.use(express.json());
